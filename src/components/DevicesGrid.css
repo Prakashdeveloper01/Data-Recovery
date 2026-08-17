@@ -1,0 +1,77 @@
+.devices-section {
+  padding: 50px 30px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.devices-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 30px;
+}
+
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 15px;
+}
+
+.device-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.device-card:hover {
+  transform: translateY(-5px);
+}
+
+.device-card:hover .device-icon {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.device-icon {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.device-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+@media (max-width: 992px) {
+  .devices-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .devices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
