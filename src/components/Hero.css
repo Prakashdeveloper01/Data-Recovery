@@ -163,7 +163,6 @@
     font-size: 32px;
   }
   .hero-features {
-    grid-template-columns: 1fr;
     gap: 15px;
   }
   .hero-actions {

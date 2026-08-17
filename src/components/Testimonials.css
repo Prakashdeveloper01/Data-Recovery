@@ -169,3 +169,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 576px) {
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 15px;
+  }
+  
+  .stat-item {
+    width: 100%;
+  }
+}

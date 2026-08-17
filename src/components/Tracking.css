@@ -195,10 +195,11 @@
   }
   
   .tracking-status-bar {
+    display: flex;
     flex-direction: column;
     gap: 25px;
-    align-items: flex-start;
-    padding-left: 30px;
+    align-items: stretch;
+    padding-left: 0;
     position: relative;
   }
 
@@ -210,24 +211,32 @@
     bottom: 15px;
     width: 2px;
     background-color: var(--border-color);
+    z-index: 1;
   }
   
   .status-step {
+    display: flex;
     flex-direction: row;
-    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
     text-align: left;
     width: 100%;
     position: relative;
+    z-index: 2;
   }
   
   .status-icon {
+    position: static;
     margin-bottom: 0;
-    position: absolute;
-    left: -30px;
-    top: 0;
+    margin-right: 15px;
+    flex-shrink: 0;
   }
 
   .status-text {
-    margin-top: 5px;
+    margin-top: 0;
+  }
+  
+  .status-date {
+    margin-left: auto;
   }
 }
